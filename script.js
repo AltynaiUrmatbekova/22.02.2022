@@ -9,5 +9,8 @@ document.querySelector('#color').addEventListener('input', function() {
 document.querySelector('#background-color').addEventListener('input', function() {
     h1.style.backgroundColor = this.value;
 });
+document.querySelector('#font-family').addEventListener('input', function() {
+    h1.style.fontFamily = this.value;
+});
 
 
