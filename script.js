@@ -16,18 +16,25 @@ document.querySelector('#font-size').addEventListener('input', function() {
     h1.style.fontSize = this.value + 'px';
     this.nextSibling.textContent = h1.style.fontSize;
 });
-document.querySelector('#font-size').addEventListener('input', function() {
-    h1.style.fontSize = this.value + 'px';
-    this.nextSibling.textContent = h1.style.fontSize;
-});
 document.querySelector('#bold').addEventListener('input', function() {
-    if (this.checked) {
-        h1.style.fontWeight = 'bold';
-    }
-    else {
-        h1.style.fontWeight = 'normal'
-    }
- });
-    
- 
+   if (this.checked) {
+       h1.style.fontWeight = 'bold';
+   }
+   else {
+       h1.style.fontWeight = 'normal'
+   }
+});
+document.querySelector('#italic').addEventListener('input', function() {
+    h1.style.fontStyle = this.checked ? 'italic' : 'normal';
+});
+document.querySelector('#underline').addEventListener('input', function() {
+    h1.style.textDecoration = this.checked ? 'underline' : 'none'
+});
+document.getElementsByName('border').forEach(function(input) {
+    input.addEventListener('input', function() {
+        h1.style.border = `1px ${this.value} black`;
+    });
+});
+
+
 
