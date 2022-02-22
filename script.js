@@ -16,5 +16,9 @@ document.querySelector('#font-size').addEventListener('input', function() {
     h1.style.fontSize = this.value + 'px';
     this.nextSibling.textContent = h1.style.fontSize;
 });
+document.querySelector('#font-size').addEventListener('input', function() {
+    h1.style.fontSize = this.value + 'px';
+    this.nextSibling.textContent = h1.style.fontSize;
+});
 
 
