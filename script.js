@@ -12,5 +12,9 @@ document.querySelector('#background-color').addEventListener('input', function()
 document.querySelector('#font-family').addEventListener('input', function() {
     h1.style.fontFamily = this.value;
 });
+document.querySelector('#font-size').addEventListener('input', function() {
+    h1.style.fontSize = this.value + 'px';
+    this.nextSibling.textContent = h1.style.fontSize;
+});
 
 
