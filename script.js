@@ -20,5 +20,14 @@ document.querySelector('#font-size').addEventListener('input', function() {
     h1.style.fontSize = this.value + 'px';
     this.nextSibling.textContent = h1.style.fontSize;
 });
-
+document.querySelector('#bold').addEventListener('input', function() {
+    if (this.checked) {
+        h1.style.fontWeight = 'bold';
+    }
+    else {
+        h1.style.fontWeight = 'normal'
+    }
+ });
+    
+ 
 

@@ -45,7 +45,14 @@
     <label>
         <input type="radio" name="border" value="dashed">Dashed
     </label>
-
+    <label>
+        <input type="radio" name="border" value="dotted">Dotted
+    </label>
+    document.getElementsByName('border').forEach(function(input) {
+        input.addEventListener('input', function() {
+            h1.style.border = `1px ${this.value} black`;
+        });
+    });
 
     <h1>Hello world</h1>
 
